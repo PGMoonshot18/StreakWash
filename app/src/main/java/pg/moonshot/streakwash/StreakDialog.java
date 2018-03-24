@@ -29,6 +29,7 @@ public class StreakDialog extends android.support.v4.app.DialogFragment {
 
     private Button btn_yes;
     private Button btn_no;
+    private int numStreak = 0;
 
     DatabaseReference databaseReference;
 
@@ -71,9 +72,10 @@ public class StreakDialog extends android.support.v4.app.DialogFragment {
 
                                 } else {
                                     for(DataSnapshot dataSnapshot1:dataSnapshot.getChildren()) {
+                                        numStreak = Integer.parseInt(dataSnapshot1.child("count").getValue().toString()) + 1;
                                         FirebaseDatabase.getInstance().getReference().child("users").child(userId).child("streaks").child(dataSnapshot1.getKey()).child("count")
                                                 .limitToFirst(1).orderByChild("date").getRef()
-                                                .setValue(Integer.parseInt(dataSnapshot1.child("count").getValue().toString()) + 1);
+                                                .setValue(numStreak);
                                         FirebaseDatabase.getInstance().getReference().child("users").child(userId).child("streaks").child(dataSnapshot1.getKey()).child("date")
                                                 .setValue(dataSnapshot1.child("date").getValue());
 
@@ -96,8 +98,10 @@ public class StreakDialog extends android.support.v4.app.DialogFragment {
                             FirebaseDatabase.getInstance().getReference().child("users").child(userId).child("points").setValue(5);
 
                         } else {
-                            int value = Integer.parseInt(dataSnapshot.getValue().toString()) + 5;
-                            FirebaseDatabase.getInstance().getReference().child("users").child(userId).child("points").setValue(value);
+                            if(numStreak <= 3) {
+                                int value = Integer.parseInt(dataSnapshot.getValue().toString()) + 5;
+                                FirebaseDatabase.getInstance().getReference().child("users").child(userId).child("points").setValue(value);
+                            }
                         }
                     }
 
