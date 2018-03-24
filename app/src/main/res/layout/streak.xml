@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryLight">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/icon"
+            android:padding="15dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="left"
+            android:paddingTop="5dp"
+            android:layout_marginRight="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Streaks"
+                android:fontFamily="@font/raleway_bold"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:textColor="#FFFF"
+                android:layout_marginBottom="-5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remember to wash your hands daily!"
+                android:fontFamily="@font/opensans_regular"
+                android:textColor="#FFFF"
+                android:textSize="15sp"
+                android:layout_marginTop="-5dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/colorPrimaryLight"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:id="@+id/ll_daily"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/tv_daily_count"
+                android:fontFamily="@font/raleway_bold"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#FFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Daily"
+                android:fontFamily="@font/opensans_regular"
+                android:textSize="15sp"
+                android:textColor="#FFFF" />
+
+            <TextView
+                android:id="@+id/tv_daily_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway_bold"
+                android:text="MARCH 12"
+                android:textAllCaps="false"
+                android:textColor="#FFFF"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/ll_weekly"
+            android:background="@color/colorPrimaryLight"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/tv_weekly_count"
+                android:fontFamily="@font/raleway_bold"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#FFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weekly"
+                android:fontFamily="@font/opensans_regular"
+                android:textSize="15sp"
+                android:textColor="#FFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_weekly_date"
+                android:text="MARCH 12 - 19"
+                android:fontFamily="@font/raleway_bold"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:textColor="#FFFF" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/colorPrimaryLight"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:id="@+id/ll_monthly"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/tv_monthly_count"
+                android:fontFamily="@font/raleway_bold"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#FFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monthly"
+                android:fontFamily="@font/opensans_regular"
+                android:textSize="15sp"
+                android:textColor="#FFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_monthly_date"
+                android:text="MARCH 12"
+                android:fontFamily="@font/raleway_bold"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:textColor="#FFFF" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway_bold"
+        android:text="Records"
+        android:textStyle="bold"
+        android:paddingLeft="15dp"
+        android:textSize="40sp"
+        android:background="@color/colorPrimaryLight"
+        android:textColor="#FFFF"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rv_streaks"
+        android:padding="10dp"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimaryLight"
+        ></android.support.v7.widget.RecyclerView>
+
+    <include layout="@layout/_footer"> </include>
+</LinearLayout>

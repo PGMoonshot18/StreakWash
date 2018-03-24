@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/gift"
+        android:padding="30dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_goal_title"
+            android:text="The Clean"
+            android:fontFamily="@font/opensans_regular"
+            android:textColor="#FFFF"
+            android:textSize="30dp"
+            android:layout_gravity="left"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_goal_desc"
+            android:text="Wash your hands 3 times today."
+            android:fontFamily="@font/opensans_regular"
+            android:textColor="#FFFF"
+            android:textSize="20dp"
+            android:layout_gravity="left"/>
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:id="@+id/pb_goal_progress"
+            android:layout_width="match_parent"
+            android:progress="1"
+            android:layout_height="wrap_content"
+            android:indeterminateTintMode="src_in" />
+
+    </LinearLayout>
+
+</LinearLayout>

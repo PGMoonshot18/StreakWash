@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryLight">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/user"
+            android:padding="15dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="left"
+            android:paddingTop="5dp"
+            android:layout_marginRight="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:fontFamily="@font/raleway_bold"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:textColor="#FFFF"
+                android:layout_marginBottom="-5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Something about you."
+                android:fontFamily="@font/opensans_regular"
+                android:textColor="#FFFF"
+                android:textSize="15sp"
+                android:layout_marginTop="-5dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/tv_username"
+        android:background="@color/colorPrimaryLight"
+        android:fontFamily="@font/raleway_regular"
+        android:text="username"
+        android:paddingLeft="15dp"
+        android:textSize="40sp"
+        android:textColor="#FFFF"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryLight"
+            android:padding="5dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email: "
+                android:fontFamily="@font/raleway_regular"
+                android:textColor="#FFFF"
+                android:textSize="20sp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sample@sample.com"
+                android:id="@+id/tv_email"
+                android:fontFamily="@font/raleway_regular"
+                android:textColor="#FFFF"
+                android:textSize="20sp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"/>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@layout/_button_round"
+            android:id="@+id/btn_logout"
+            android:textStyle="bold"
+            android:text="LOGOUT"
+            android:textColor="#FFFF"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/_footer"> </include>
+</LinearLayout>

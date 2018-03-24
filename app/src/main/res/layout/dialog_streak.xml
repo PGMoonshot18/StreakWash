@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Streak Check"
+        android:fontFamily="@font/raleway_bold"
+        android:textSize="30dp"
+        android:textColor="#FFFF"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_trivia"
+        android:text="Did you really wash your hands?"
+        android:fontFamily="@font/raleway_regular"
+        android:textSize="20dp"
+        android:textColor="#D3D3D3"
+        android:textStyle="bold"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Yes"
+        android:id="@+id/btn_yes"
+        android:textColor="#FFFF"
+        android:fontFamily="@font/raleway_bold"
+        android:textAllCaps="false"
+        android:textSize="18dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No"
+        android:id="@+id/btn_no"
+        android:textColor="#FFFF"
+        android:fontFamily="@font/raleway_bold"
+        android:textAllCaps="false"
+        android:textSize="18dp"/>
+
+</LinearLayout>
